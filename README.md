@@ -17,7 +17,7 @@ Personal academic portfolio of **Nguonheng Hout**, M.S. student in Computer Engi
 
 ## Features
 
-- **Single file:** the whole site, including the profile photo, is in `index.html`. No build step and no dependencies.
+- **No build step:** plain HTML, CSS and JavaScript in separate files. No frameworks or dependencies.
 - **Dark / light mode:** follows the visitor's device setting by default; the toggle in the top bar switches it and the choice is remembered.
 - **Responsive:** works on desktop, tablet and phone.
 - **Email menu:** clicking "Email" lets visitors open Gmail, open their own mail app, or copy the address.
@@ -31,13 +31,20 @@ Plain HTML, CSS and JavaScript. Fonts: [Space Grotesk](https://fonts.google.com/
 
 ```
 nguonhenghout99.github.io/
-├── index.html    # the entire website
-└── README.md     # this file
+├── index.html          # page structure and all text content
+├── css/
+│   └── style.css       # colours, layout, dark mode, responsive rules
+├── js/
+│   └── script.js       # page navigation, dark/light toggle, email menu
+├── assets/
+│   ├── profile.jpg     # profile photo
+│   └── favicon.svg     # browser tab icon
+└── README.md           # this file
 ```
 
 ## Updating the site
 
-All content is in `index.html`. Search for these markers to find each part:
+All text content is in `index.html`; styling is in `css/style.css` and behaviour in `js/script.js`. Search `index.html` for these markers to find each part:
 
 | To change | Search for |
 |---|---|
@@ -46,17 +53,18 @@ All content is in `index.html`. Search for these markers to find each part:
 | Publications and projects | `data-view="publications"` |
 | CV (education, experience, skills, awards) | `data-view="cv"` |
 | Contact details | `data-view="contact"` |
-| Colours (light and dark) | `--acc` and `--bg` near the top of `<style>` |
+| Colours (light and dark) | `--acc` and `--bg` at the top of `css/style.css` |
 
 To add a **news item**, copy one `<li>` inside `<ul class="news">` and put the newest at the top.
 To add a **publication**, replace the "No publications yet" paragraph with a list of your papers.
+To change the **photo**, replace `assets/profile.jpg` with a new square image of the same name.
 
 ## Deploying with GitHub Pages
 
 1. The repository must be named exactly **`nguonhenghout99.github.io`** and be public.
-2. Commit and push `index.html` to the `main` branch:
+2. Commit and push all files and folders to the `main` branch:
    ```bash
-   git add index.html README.md
+   git add .
    git commit -m "Update personal website"
    git push origin main
    ```
