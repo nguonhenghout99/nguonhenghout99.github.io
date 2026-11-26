@@ -75,5 +75,6 @@ To change the **photo**, replace `assets/profile.jpg` with a new square image of
 
 - Email: houtnguonheng2300@gmail.com
 - GitHub: [github.com/nguonhenghout99](https://github.com/nguonhenghout99)
+- LinkedIn: [linkedin.com/in/hout-n-9b0b42105](https://www.linkedin.com/in/hout-n-9b0b42105/)
 
 © 2026 Nguonheng Hout
